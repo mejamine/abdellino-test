@@ -13,6 +13,7 @@ const ProduitPage = () => {
     }, []);
     const { saveProduits } = useSelector(state => state.savedProduit)
     
+    const { currentAdmin } = useSelector(state => state.admin)
 
     const dispatch = useDispatch()
 
@@ -113,8 +114,12 @@ const ProduitPage = () => {
                 } else {
                     setProduit(json);
                     setMainImage(json.imgUrl[0]);
+                    console.log('Current User:', currentUser);
+                    console.log('User Role:', currentUser?.role);
+                    console.log(currentAdmin);
+
                      // Set the main image to the first image
-                    if (currentUser.role === "user"){
+                     if (currentAdmin === null) { 
                         try {
                             const res = await fetch(`http://localhost:4000/abdellino/produits/${id.id}`, {
                                 method: 'PUT',
@@ -143,7 +148,7 @@ const ProduitPage = () => {
             }
         };
         loadProduit();
-    }, [id.id]);
+    }, [id.id , currentUser,currentAdmin]);
 
     return (
         <div>

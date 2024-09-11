@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import SkletonLoading from './SkletonLoading';
 import { useNavigate } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
@@ -38,7 +38,7 @@ const HomeService = () => {
     };
     const settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 5,
       slidesToScroll: 1,
