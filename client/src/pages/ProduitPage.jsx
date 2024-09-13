@@ -126,6 +126,7 @@ const ProduitPage = () => {
                                 headers: {
                                     "Content-Type": 'application/json'
                                 },
+                                
                                 body: JSON.stringify({
                                     ...json,
                                     ['visite']: json.visite+1,
