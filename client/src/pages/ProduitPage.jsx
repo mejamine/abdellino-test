@@ -126,7 +126,7 @@ const ProduitPage = () => {
                                 headers: {
                                     "Content-Type": 'application/json'
                                 },
-                                
+
                                 body: JSON.stringify({
                                     ...json,
                                     ['visite']: json.visite+1,
@@ -157,7 +157,7 @@ const ProduitPage = () => {
             <div className="md:grid md:grid-cols-2 px-5 pt-10 mb-24">
                 <div className="px-2 pr-10">
                     {/* Main Image */}
-                    <img src={mainImage} className="h-[30vw] w-[20vw] ml-72 object-cover" alt="Main Product" />
+                    <img src={mainImage} className="h-[33vw] w-[29vw] ml-72 object-cover" alt="Main Product" />
                     {/* Thumbnails */}
                     <div className="flex mt-4 ml-72">
                         {imgUrl.map((img, index) => (

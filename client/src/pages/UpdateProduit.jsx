@@ -218,7 +218,7 @@ const UpdateProduit = () => {
                                             placeholder='Type'
                                             name='type'
                                             className='form_input border-[1px] focus:border-red-500 rounded-md placeholder:text-sm'
-                                            {...register('type', { required: 'Ce champ est obligatoire*' })}
+                                            {...register('type')}
                                         />
                                         {errors.type && <p className='text-red-700 text-xs'>{errors.type.message}</p>}
                                     </div>

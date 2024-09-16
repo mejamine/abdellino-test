@@ -13,9 +13,9 @@ const Card = () => {
         alt="Profile"
       />
 
-      <div className='absolute inset-0 mt-[300px] text-black text-7xl ml-64 font-semibold items-center justify-center'>
-        <h2>L'Art de Porter </h2>
-        <h2>  des Capuches & T-Shirts</h2>
+      <div className='absolute inset-0 mt-[300px] text-black text-7xl ml-64 font-semibold font-lora italic items-center justify-center'>
+        <h2>Abdellino</h2>
+        <h2>  Porter la différence</h2>
       </div>
       <div className="absolute inset-0 mt-[500px] ml-64 items-center justify-center">
         <button

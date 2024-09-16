@@ -11,65 +11,67 @@ function TicketsAdmin() {
   const [commandes, setCommandes] = useState([]);
   const handleMaterialUpdates = async (commande) => {
     try {
-      await Promise.all(
-        commande.listeP.map(async (cmd) => {
-          try {
-            const res = await fetch(`http://localhost:4000/abdellino/produits/${cmd.id}`);
-            const json = await res.json();
-            
-            if (json.success === false) {
-              toast.error(json.message, {
-                autoClose: 2000,
-              });
-            } else {
-              console.log(json);
-              
-              try {
-                const updateRes = await fetch(`http://localhost:4000/abdellino/produits/${cmd.id}`, {
-                  method: 'PUT',
-                  headers: {
-                    "Content-Type": 'application/json',
-                  },
-                  body: JSON.stringify({
-                    ...json,
-                    ['vendue']: json.vendue + cmd.quantity,
-                    ['quantite']:json.quantite-cmd.quantity,
-                    userRef: currentAdmin._id,
-                  }),
-                });
-                
-                const serverRes = await updateRes.json();
-                
-                if (serverRes.success === false) {
-                  toast.error(serverRes.message, {
-                    autoClose: 2000,
-                  });
-                } 
-                else{
-                  handleCommandeDelete(commande._id);  
-                }
-                
-              } catch (error) {
-                toast.error(error.message, {
-                  autoClose: 2000,
-                });
-              }
-            }
-          } catch (error) {
-            toast.error(error.message, {
+      for (const cmd of commande.listeP) {
+        try {
+          const res = await fetch(`http://localhost:4000/abdellino/produits/${cmd.id}`);
+          const json = await res.json();
+  
+          if (json.success === false) {
+            toast.error(json.message, {
               autoClose: 2000,
             });
+            return; // Arrête le traitement si une erreur est rencontrée
           }
-        })
-      );
+  
+  
+          // Vérifie si la quantité demandée est supérieure à la quantité en stock
+          if (cmd.quantity > json.quantite) {
+            alert(`La quantité demandée pour un produit de cet commande dépasse le stock disponible.`, {
+              autoClose: 2000,
+            });
+            return; // Arrête le traitement si la quantité dépasse le stock
+          }
+  
+          // Mise à jour du produit
+          const updateRes = await fetch(`http://localhost:4000/abdellino/produits/${cmd.id}`, {
+            method: 'PUT',
+            headers: {
+              "Content-Type": 'application/json',
+            },
+            body: JSON.stringify({
+              ...json,
+              ['vendue']: json.vendue + cmd.quantity,
+              ['quantite']: json.quantite - cmd.quantity,
+              userRef: currentAdmin._id,
+            }),
+          });
+  
+          const serverRes = await updateRes.json();
+  
+          if (serverRes.success === false) {
+            toast.error(serverRes.message, {
+              autoClose: 2000,
+            });
+            return; // Arrête le traitement si une erreur est rencontrée lors de la mise à jour
+          }
+        } catch (error) {
+          toast.error(error.message, {
+            autoClose: 2000,
+          });
+          return; // Arrête le traitement en cas d'erreur
+        }
+      }
+  
+      // Suppression de la commande seulement si tout s'est bien passé
+      handleCommandeDelete(commande._id);
     } catch (error) {
       console.error("Error processing materials:", error);
     }
-    
   };
+  
+  
   const generatePDF = (commande) => {
     const doc = new jsPDF();
-    console.log(commande);
 
     // Add title
     doc.setFontSize(24);

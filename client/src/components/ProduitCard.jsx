@@ -51,20 +51,32 @@ const ProduitCard = ({ produit }) => {
     return (
         <div className="listing_card bg-white shadow-lg shadow-black/10  hover:shadow-brand-blue/20 rounded-sm w-[300px] hover:shadow-lg group sm:mr-auto sm:ml-0 mx-auto">
             <div className="card-container">
-                <div
-                    className="image_container relative overflow-hidden cursor-pointer"
-                    onClick={() => navigate(`/produit/${_id}`)}
-                >
-                    <img
-                        className='max-h-[200px] min-h-[200px] w-full object-cover rounded-t-sm hover:scale-105 duration-300'
-                        src={imgUrl[0]} alt="property image"
-                    />
-                    {
-                        offer && <div className="absolute top-2 right-0 bg-amber-400 py-1 px-2 ">
-                            <p className='text-xs capitalize text-black font-heading'>Offre!</p>
-                        </div>
-                    }
-                </div>
+            <div
+    className="image_container relative overflow-hidden cursor-pointer"
+    onClick={() => navigate(`/produit/${_id}`)}
+>
+    <img
+        className='max-h-[200px] min-h-[200px] w-full object-cover rounded-t-sm hover:scale-105 duration-300'
+        src={imgUrl[0]} alt="property image"
+    />
+    {/* Affichage de l'offre */}
+    {offer && (
+        <div className="absolute top-2 right-0 bg-amber-400 py-1 px-2">
+            <p className='text-xs capitalize text-black font-heading'>Offre!</p>
+        </div>
+    )}
+    {/* Affichage de la disponibilité ou du stock */}
+    {quantite > 0 ? (
+        <div className="absolute top-36 right-0 bg-green-500 py-1 px-2">
+            <p className='text-xs capitalize text-black font-heading'>Disponible</p>
+        </div>
+    ) : (
+        <div className="absolute top-36 right-0 bg-red-500 py-1 px-2">
+            <p className='text-xs capitalize text-black font-heading'>Out of stock !</p>
+        </div>
+    )}
+</div>
+
 
 
 
@@ -79,7 +91,7 @@ const ProduitCard = ({ produit }) => {
                             className='font-content text-xs font-bold truncate flex items-center justify-start mt-1'>
                             {description}
                         </p>
-                        <p>quantité : {quantite}</p>
+                        {/* <p>quantité : {quantite}</p> */}
                     </div>
 
 

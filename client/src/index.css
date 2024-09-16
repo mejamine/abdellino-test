@@ -5,7 +5,7 @@ body {
 }
 
 #root {
-  @apply bg-[#f1f5f1]  h-full relative;
+  @apply bg-[#f1f4f1]  h-full relative;
 }
 
 .container {

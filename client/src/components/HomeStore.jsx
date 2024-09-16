@@ -38,13 +38,13 @@ const HomeService = () => {
     };
     const settings = {
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
       autoplay: true,  // Enable autoplay
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1500,
         
     
         responsive: [
@@ -80,12 +80,11 @@ const HomeService = () => {
                 className="mx-auto  p-6 bg-white"
             >
                 <div className="content">
-                    <h2 className='text-center text-3xl font-bold sm:text-5xl font-roboto  text-black '>
+                    <h2 className='text-center text-3xl font-extrabold sm:text-5xl font-lora italic  text-black '>
                     NOTRE STORE
                     </h2>
                     <p className=' text-center font-content  font-medium text-sm sm:text-lg mt-10 mb-10 px-20 '>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam omnis recusandae natus officia fuga sint quibusdam sit tenetur vero optio, dignissimos magni, quo maiores, nemo deleniti voluptate minima aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. At incidunt reprehenderit asperiores nemo dignissimos, necessitatibus unde aspernatur sed. Laboriosam animi dolores nobis placeat quo voluptate id culpa natus praesentium architecto!
-                    </p>                
+                    Chez Abdellino, nous croyons que la mode est plus qu'un simple vêtement — c'est une manière de s'exprimer. Nos collections sont soigneusement sélectionnées pour offrir un large éventail de styles, du casual au chic, afin de répondre aux goûts et aux besoins de chacun. Grâce à notre plateforme en ligne, nous vous offrons une expérience de shopping fluide et agréable, avec des nouveautés ajoutées régulièrement. Parcourez notre sélection dans le carrousel ci-dessous et laissez-vous inspirer par les dernières tendances, directement disponibles à portée de clic.                    </p>                
                     </div>
 
                  <div className="post_container !mt-4">

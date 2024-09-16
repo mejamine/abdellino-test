@@ -42,7 +42,7 @@ export const NewProduct = () => {
             />
 
             <div className='grid grid-cols-2'>
-            <div className='relative text-black text-7xl ml-64 font-semibold flex items-center  justify-start p-8 col-span-1'                     data-aos="fade-right" 
+            <div className='relative text-black text-7xl ml-64 font-semibold flex items-center font-lora italic  justify-start p-8 col-span-1'                     data-aos="fade-right" 
             >
                     découvrez Notre Dernier Produit 
                 </div>
@@ -55,7 +55,7 @@ export const NewProduct = () => {
                     <h2 className="text-4xl font-bold mb-4" data-aos="fade-right">
                         {produit.title}
                     </h2>
-                    <h6 className="text-xl mb-4" data-aos="fade-left">
+                    <h6 className="text-2xl mb-4 font-bold" data-aos="fade-left">
                         Prix : {produit.prix} DT
                     </h6>
                     {/* Afficher la première image du tableau imgUrl */}

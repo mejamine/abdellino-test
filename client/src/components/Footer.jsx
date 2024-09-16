@@ -31,28 +31,28 @@ const Footer = () => {
         <div>
           <ul className="space-y-4 pl-32 pt-24">
             <li>
-              <a href="/" className="text-gray-900 hover:text-black text-base">ACCUEIL</a>
+              <a href="/" className="text-gray-900 hover:text-black text-base font-bold">ACCUEIL</a>
             </li>
             <li>
-              <a href="/store" className="text-gray-900 hover:text-black text-base">STORE</a>
+              <a href="/store" className="text-gray-900 hover:text-black text-base font-bold">STORE</a>
             </li>
             <li>
-              <a href="/contact" className="text-gray-900 hover:text-black text-base">CONTACT</a>
+              <a href="/contact" className="text-gray-900 hover:text-black text-base font-bold">CONTACT</a>
             </li>
           </ul>
         </div>
 
         <div className='pl-24 pt-16'>
-          <h4 className="text-lg font-semibold mb-6 text-gray-600">CONTACT</h4>
+          <h4 className="text-lg  mb-6 text-gray-600 font-bold">CONTACT</h4>
           <ul className="space-y-4">
             <li>
-              <a href="" className="text-gray-600 hover:text-gray-900 text-sm">Abdellino9@gmail.com</a>
+              <a href="" className="text-gray-600 hover:text-gray-900 text-sm font-bold">Abdellino9@gmail.com</a>
             </li>
             <li>
-              <a href="" className="text-gray-600 hover:text-gray-900 text-sm">+216 54 316 183</a>
+              <a href="" className="text-gray-600 hover:text-gray-900 text-sm font-bold">+216 54 316 183</a>
             </li>
             <li>
-              <a href="" className="text-gray-600 hover:text-gray-900 text-sm">Sousse 4000</a>
+              <a href="" className="text-gray-600 hover:text-gray-900 text-sm font-bold">Sousse 4000</a>
             </li>
           </ul>
         </div>
