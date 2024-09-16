@@ -5,6 +5,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import Footer from "../components/Footer";
 import { handleSave, handleProduitRemove, clearSavedProduit } from '../redux/saveProduit/saveProduitSlice'
+import CarrouselP from "../components/CarrouselP";
 
 
 const ProduitPage = () => {
@@ -216,6 +217,7 @@ const ProduitPage = () => {
                     </div>
                 </div>
             </div>
+            <CarrouselP/>
             <Footer />
         </div>
     );
