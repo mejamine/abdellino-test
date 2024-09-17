@@ -14,10 +14,10 @@ export default function Card1() {
               <p className=" pt-10 text-lg text-justify">Abdellino est une marque de vêtements en ligne fondée en 2023 par Marwen, un jeune entrepreneur passionné de mode. Inspiré par son désir de créer des tenues modernes et accessibles, Abdellino offre une collection de vêtements à la fois élégants et confortables, conçus pour s'adapter aux tendances actuelles tout en mettant en avant l'authenticité. Chaque pièce reflète le souci du détail et la qualité que Marwen souhaite partager avec ses clients à travers le monde. Abdellino se distingue par son engagement envers l'innovation et l'expression personnelle, permettant à chacun de trouver un style unique et affirmé.</p>
             </div>
           </div>
-          <div>
+          <div className="text-center justify-center items-center">
             <img
               src={logo}
-              className="grid place-items-center w-[20vw]  sm:ml-64 rounded-3xl "
+              className="grid place-items-center w-[20vw]  sm:ml-64 rounded-3xl mx-auto "
               alt="Profile"
             />
           </div>

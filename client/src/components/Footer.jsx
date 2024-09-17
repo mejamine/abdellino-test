@@ -12,10 +12,10 @@ const Footer = () => {
 
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className=" lg:items-center">
-          <a href="#">
-            <img className='h-[10vw] w-[10vw] ml-24 mt-10 rounded-3xl' src={logo} alt="logo" />
+          <a href="#" className=" flex justify-center items-center lg:block">
+            <img className=' w-[50vw] md:h-[10vw] md:w-[10vw] sm:ml-24 mt-10 rounded-3xl' src={logo} alt="logo" />
           </a>
-          <div className="ml-32 ">
+          <div className="lg:ml-32   text-center lg:text-left">
             <a href="https://www.instagram.com/abdellino.officiel/?hl=fr" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} size="2x" className="text-gray-800 mt-10 hover:text-gray-600" />
             </a>
@@ -29,7 +29,7 @@ const Footer = () => {
 
 
         <div>
-          <ul className="space-y-4 pl-32 pt-24">
+          <ul className="space-y-4 lg:pl-32 pt-24 text-center lg:text-left">
             <li>
               <a href="/" className="text-gray-900 hover:text-black text-base font-bold">ACCUEIL</a>
             </li>
@@ -42,7 +42,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='pl-24 pt-16'>
+        <div className='lg:pl-24 pt-16 text-center lg:text-left'>
           <h4 className="text-lg  mb-6 text-gray-600 font-bold">CONTACT</h4>
           <ul className="space-y-4">
             <li>

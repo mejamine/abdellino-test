@@ -41,15 +41,15 @@ export const NewProduct = () => {
                 }}
             />
 
-            <div className='grid grid-cols-2'>
-            <div className='relative text-black text-7xl ml-64 font-semibold flex items-center font-lora italic  justify-start p-8 col-span-1'                     data-aos="fade-right" 
+            <div className='lg:grid lg:grid-cols-2'>
+            <div className='relative text-black text-7xl lg:ml-64 font-semibold flex items-center font-lora italic  justify-start p-8 col-span-1'                     data-aos="fade-right" 
             >
                     découvrez Notre Dernier Produit 
                 </div>
-            <div className="relative flex items-end justify-end p-8 h-full mr-48">
+            <div className="relative flex items-end justify-end p-8 h-full lg:mr-48 ">
 
                 <div
-                    className="bg-gray-200 p-8 rounded-lg  max-w-md text-center flex flex-col items-center"
+                    className="bg-gray-200 p-8 rounded-lg  lg:max-w-md text-center w-full flex flex-col  items-center"
                     data-aos="fade-up" 
                 >
                     <h2 className="text-4xl font-bold mb-4" data-aos="fade-right">
@@ -63,7 +63,7 @@ export const NewProduct = () => {
                         <img
                             src={produit.imgUrl[0]}
                             alt={produit.title}
-                            className="rounded-lg mt-4 w-[20vw] h-[30vw] object-cover"
+                            className="rounded-lg mt-4 lg:w-[20vw] lg:h-[30vw] object-cover"
                             data-aos="zoom-in" 
                         />
                     )}

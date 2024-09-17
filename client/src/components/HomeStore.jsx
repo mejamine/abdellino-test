@@ -77,7 +77,7 @@ const HomeService = () => {
       return (
         < section >
             <div
-                className="mx-auto  p-6 bg-white"
+                className="mx-auto  p-10 bg-white"
             >
                 <div className="content">
                     <h2 className='text-center text-3xl font-extrabold sm:text-5xl font-lora italic  text-black '>
@@ -92,8 +92,8 @@ const HomeService = () => {
                         loading ?
                             <SkletonLoading />
                             :
-                            <div className="slider_container">
-                                <Slider {...settings} className='z-10 relative'>
+                            <div className="slider_container  px-auto">
+                                <Slider {...settings} className=''>
                                     {
                                         produits && produits.map(produit => <ProduitCard key={produit._id} produit={produit} />)
                                     }
